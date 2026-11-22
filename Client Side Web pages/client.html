@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Campus Exchange - Client</title>
+    <link rel="stylesheet" href="client.css">
+  </head>
+  <body>
+    <header class="topbar">
+    <a class="logo" href="#home">Campus Exchange</a>
+    <input class="search" type="search" placeholder="Search products...">
+    <nav>
+      <a href="#wishlist" aria-label="Wishlist">♡</a>
+      <a href="#chat" aria-label="Messages">💬</a>
+      <a href="#cart" aria-label="Cart">🛒</a>
+      <a href="#profile" aria-label="Profile">👤</a>
+    </nav>
+  </header>
+  <main>
+    <section id="home" class="page-section">
+      <div class="categories">
+        <button>All</button>
+        <button>Books</button>
+        <button>Electronics</button>
+        <button>Stationery</button>
+        <button>Furniture</button>
+        <button>Clothing</button>
+      </div>
+      <h1>High Demand Products</h1>
+      <div class="product-grid">
+        <article class="product-card">
+          <div class="product-image">📚</div>
+          <h3>Engineering Books</h3>
+          <p>₹250</p>
+          <span>🔥 87 looking</span>
+          <button class="dark-button">View Details</button>
+        </article>
+        <article class="product-card">
+          <div class="product-image">🎧</div>
+          <h3>Wireless Headphones</h3>
+          <p>₹800</p>
+          <span>🔥 64 looking</span>
+          <button class="dark-button">View Details</button>
+        </article>
+        <article class="product-card">
+          <div class="product-image">🪑</div>
+          <h3>Study Chair</h3>
+          <p>₹150</p>
+          <span>🔥 42 looking</span>
+          <button class="dark-button">View Details</button>
+        </article>
+        <article class="product-card">
+          <div class="product-image">👕</div>
+          <h3>College Hoodie</h3>
+          <p>₹300</p>
+          <span>🔥 31 looking</span>
+          <button class="dark-button">View Details</button>
+        </article>
+      </div>
+    </section>
+    <section id="verify" class="page-section verification">
+      <h1>Verify Your Credentials</h1>
+      <div class="verify-card">
+        <div class="verify-icon">✓</div>
+        <h2>Verification Successful</h2>
+        <p>We checked your account details, student ID, and college email.</p>
+        <ul><li>Account details checked</li><li>Student ID verified</li><li>College email verified</li><li>Account status active</li></ul>
+        <button class="dark-button" onclick="location.hash='home'">Continue</button>
+      </div>
+    </section>
+    <section id="login" class="auth-section page-section">
+      <div class="auth-card">
+        <h2>Login</h2>
+        <input placeholder="Email / Student ID">
+        <input type="password" placeholder="Password">
+        <a href="#">Forgot Password?</a>
+        <button class="dark-button">Login</button>
+        <p>Don't have an account? <a href="#signup">Sign Up</a>
+      </p>
+    </div>
+    <div id="signup" class="auth-card">
+      <h2>Sign Up</h2>
+      <input placeholder="Full Name">
+      <input placeholder="Student ID">
+      <input placeholder="College Email">
+      <input placeholder="Phone Number">
+      <input type="password" placeholder="Password">
+      <input type="password" placeholder="Confirm Password">
+      <button class="dark-button">Create Account</button>
+      <p>Already have an account? <a href="#login">Login</a>
+    </p>
+  </div>
+</section>
+    <section id="exchange" class="page-section exchange two-column">
+      <div><h2>Your Item</h2><div class="big-image">📚</div><h3>Engineering Books</h3><p>₹250</p></div>
+      <div><h2>You Get</h2><div class="big-image">🎧</div><h3>Wireless Headphones</h3><p>₹800</p></div>
+      <div class="exchange-message"><h2>Send Exchange Request</h2><textarea placeholder="Type your message..."></textarea><button class="dark-button full-button">Send Request</button></div>
+    </section>
+    <section id="listings" class="page-section listings"><h1>My Listings</h1><div class="listing-tabs"><button>Active (3)</button><button>Sold (1)</button><button>Expired (0)</button></div><div class="listing-row"><div class="small-image">📚</div><div><h3>Engineering Books</h3><p>₹250 · 87 views</p><small>Posted on 12 Aug 2024</small></div><button>Edit</button><button>Delete</button></div><div class="listing-row"><div class="small-image">🎧</div><div><h3>Wireless Headphones</h3><p>₹800 · 64 views</p><small>Posted on 10 Aug 2024</small></div><button>Edit</button><button>Delete</button></div><button class="full-button">Add New Listing</button></section>
+    <section id="wishlist" class="page-section wishlist"><h1>Wishlist</h1><div class="listing-row"><div class="small-image">📚</div><div><h3>Engineering Books</h3><p>₹250</p><small>Added on 12 Aug 2024</small></div><span class="wishlist-heart">♡</span></div><div class="listing-row"><div class="small-image">🪑</div><div><h3>Study Chair</h3><p>₹150</p><small>Added on 08 Aug 2024</small></div><span class="wishlist-heart">♡</span></div><button class="dark-button full-button" onclick="location.hash='home'">View Marketplace</button></section>
+<section id="sell" class="form-section page-section">
+  <h1>Sell an Item</h1>
+  <div class="form-layout">
+    <div class="upload-box">＋<br>
+      <small>Add Photo</small>
+    </div>
+    <form>
+      <input placeholder="Product Name">
+      <select>
+      <option>Category</option>
+      <option>Books</option>
+      <option>Electronics</option>
+      </select>
+      <select>
+      <option>Condition</option>
+      <option>New</option>
+      <option>Used - Good</option>
+      </select>
+      <input type="number" placeholder="Price">
+      <textarea placeholder="Description">
+      </textarea>
+      <input placeholder="Location on Campus">
+      <button class="dark-button">Next</button>
+    </form>
+  </div>
+</section>
+<section id="product" class="details page-section">
+  <a href="#home">← Back</a>
+  <div class="details-layout">
+    <div class="big-image">📚</div>
+    <div>
+      <h1>Engineering Books</h1>
+      <h2>₹250</h2>
+      <p>🔥 87 students looking for this</p>
+      <p>
+        <b>Condition:</b> Used - Good</p>
+        <p>
+          <b>Seller:</b> Rahul Sharma</p>
+          <p>
+            <b>Location:</b> Main Campus</p>
+            <p>
+              <b>Posted on:</b> 12 Aug 2024</p>
+            </div>
+          </div>
+          <p>
+            <b>Description</b>
+            <br>This is a short description about the product.</p>
+            <button>Chat with Seller</button>
+            <button class="dark-button">I Need This</button>
+            <button>Add to Wishlist</button>
+          </section>
+          <section id="chat" class="chat page-section">
+            <div class="conversation">
+              <h2>Conversations</h2>
+              <p>👤 Rahul Sharma<br>
+                <small>Hey, is it available?</small>
+              </p>
+              <p>👤 Neha Iyer<br>
+                <small>Yes, available</small>
+              </p>
+              <p>👤 Amit Verma<br>
+                <small>Can we exchange?</small>
+              </p>
+            </div>
+            <div class="chat-area">
+              <h2>Chat Area</h2>
+              <p class="received">Hi, is this still available?</p>
+              <p class="sent">Yes, it is!</p>
+              <p class="received">Great! Can we meet tomorrow?</p>
+              <p class="sent">Sure, 2 PM at Library</p>
+              <input placeholder="Type a message...">
+            </div>
+          </section>
+          <section id="cart" class="page-section">
+            <h1>My Cart</h1>
+            <div class="cart-row">
+              <div class="small-image">📚</div>
+              <div>
+                <h3>Engineering Books</h3>
+                <p>₹250</p>
+              </div>
+              <div>
+                <button>−</button> 1 <button>＋</button> 🗑</div>
+              </div>
+              <div class="cart-row">
+                <div class="small-image">🎧</div>
+                <div>
+                  <h3>Wireless Headphones</h3>
+                  <p>₹800</p>
+                </div>
+                <div>
+                  <button>−</button> 1 <button>＋</button> 🗑</div>
+                </div>
+                <h2 class="total">Total: ₹1050</h2>
+                <button class="dark-button full-button">Proceed to Checkout</button>
+              </section>
+              <section id="checkout" class="page-section two-column">
+                <form>
+                  <h2>Delivery Details</h2>
+                  <input placeholder="Name">
+                  <input placeholder="Phone Number">
+                  <input placeholder="Address">
+                  <input placeholder="Location on Campus">
+                  <input type="date">
+                  <select>
+                  <option>Preferred Time</option>
+                  <option>10 AM - 12 PM</option>
+                  </select>
+                </form>
+                <div class="summary">
+                  <h2>Order Summary</h2>
+                  <p>Engineering Books <b>₹250</b>
+                </p>
+                <p>Wireless Headphones <b>₹800</b>
+              </p>
+              <hr>
+              <h3>Total <b>₹1050</b>
+            </h3>
+          </div>
+          <button class="dark-button full-button">Place Order</button>
+        </section>
+        <section id="profile" class="page-section profile">
+          <div class="profile-card">
+            <div class="avatar">👤</div>
+            <h2>Rahul Sharma</h2>
+            <p>rahul@college.edu.in</p>
+            <p>Main Campus</p>
+            <button>Edit Profile</button>
+          </div>
+          <div class="menu-card">
+            <a class="menu-link" href="#checkout">🛍 My Orders <span>›</span></a>
+            <a class="menu-link" href="#listings">🏷 My Listings <span>›</span></a>
+            <a class="menu-link" href="#wishlist">♡ Wishlist <span>›</span></a>
+            <a class="menu-link action-link" href="#">⌕ Saved Searches <span>›</span></a>
+            <a class="menu-link action-link" href="#">⚙ Settings <span>›</span></a>
+            <a class="menu-link" href="../login.html">↪ Logout <span>›</span></a>
+          </div>
+        </section>
+        <section id="help" class="page-section two-column">
+          <div>
+            <h2>Help Center</h2>
+            <p class="help-item">How to Buy?　›</p>
+            <p class="help-item">How to Sell?　›</p>
+            <p class="help-item">How to Exchange?　›</p>
+            <p class="help-item">Payment & Safety　›</p>
+            <p class="help-item">Report an Issue　›</p>
+          </div>
+          <form>
+            <h2>Contact Us</h2>
+            <input placeholder="Your Name">
+            <input placeholder="Your Email">
+            <textarea placeholder="Message">
+            </textarea>
+            <button class="dark-button full-button">Send Message</button>
+          </form>
+        </section>
+      </main>
+  <footer class="site-footer">Campus Exchange · A student marketplace project</footer>
+  <script src="client.js"></script>
+    </body>
+  </html>
+
