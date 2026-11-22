@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Campus Exchange - Admin</title>
+    <link rel="stylesheet" href="admin.css">
+  </head>
+  <body>
+    <div class="admin-layout">
+      <aside>
+        <h2>Campus<br>Exchange</h2>
+      <a class="active" href="#dashboard">▣ Dashboard</a>
+      <a href="#users">♙ Users</a>
+      <a href="#listings">▤ Listings</a>
+      <a href="#categories">▦ Categories</a>
+      <a href="#reports">⌂ Reports</a>
+      <a href="#complaints">ⓘ Complaints</a>
+      <a href="#settings">⚙ Settings</a>
+      <a href="../login.html">↪ Logout</a>
+      </aside>
+      <main>
+        <h1>Admin Dashboard</h1>
+        <div class="stats">
+          <div>
+            <span>Total Users</span>
+            <b>1245</b>
+          </div>
+          <div>
+            <span>Total Listings</span>
+            <b>532</b>
+          </div>
+          <div>
+            <span>Active Listings</span>
+            <b>432</b>
+          </div>
+          <div>
+            <span>Reports</span>
+            <b>23</b>
+          </div>
+        </div>
+        <section>
+          <h2>Recent Listings</h2>
+          <table>
+            <thead>
+              <tr>
+                <th>Product</th>
+                <th>Seller</th>
+                <th>Category</th>
+                <th>Status</th>
+                <th>Action</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Engineering Books</td>
+                <td>Rahul</td>
+                <td>Books</td>
+                <td class="active-text">Active</td>
+                <td>
+                <button>View</button>
+                </td>
+              </tr>
+              <tr>
+                <td>Wireless Headphones</td>
+                <td>Neha</td>
+                <td>Electronics</td>
+                <td class="active-text">Active</td>
+                <td>
+                <button>View</button>
+                </td>
+              </tr>
+              <tr>
+                <td>Study Chair</td>
+                <td>Amit</td>
+                <td>Furniture</td>
+                <td class="pending-text">Pending</td>
+                <td>
+                <button>View</button>
+                </td>
+              </tr>
+              <tr>
+                <td>College Hoodie</td>
+                <td>Priya</td>
+                <td>Clothing</td>
+                <td class="active-text">Active</td>
+                <td>
+                <button>View</button>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </section>
+        <section id="users-panel" class="admin-panel" hidden>
+          <h2>Demo Users</h2>
+          <table>
+            <thead><tr><th>Name</th><th>Email</th><th>Student ID</th><th>Campus</th><th>Status</th></tr></thead>
+            <tbody>
+              <tr><td>Rahul Sharma</td><td>rahul@college.edu.in</td><td>STU1001</td><td>Main Campus</td><td class="active-text">Active</td></tr>
+              <tr><td>Neha Iyer</td><td>neha@college.edu.in</td><td>STU1002</td><td>Main Campus</td><td class="active-text">Active</td></tr>
+              <tr><td>Amit Verma</td><td>amit@college.edu.in</td><td>STU1003</td><td>North Campus</td><td class="pending-text">Pending</td></tr>
+              <tr><td>Priya Singh</td><td>priya@college.edu.in</td><td>STU1004</td><td>Main Campus</td><td class="active-text">Active</td></tr>
+            </tbody>
+          </table>
+        </section>
+      </main>
+    </div>
+  </body>
+  <script src="admin.js"></script>
+</html>
+
